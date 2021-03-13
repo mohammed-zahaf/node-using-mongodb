@@ -1,7 +1,9 @@
-import { addNewProduct } from '../controllers/controllers';
+import { addNewProduct, getProducts, getProductWithID } from '../controllers/controllers';
 
 function routes(app) {
-  app.route('/products').post(addNewProduct);
+  app.route('/product').post(addNewProduct);
+  app.get('/products').post(getProducts);
+  app.get('/products/:ProductID').post(getProductWithID);
 }
 
 export default {
